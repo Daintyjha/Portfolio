@@ -4,39 +4,56 @@
 
 <head>
 <!-- =========================================
-     GOOGLE TAG MANAGER
+     GOOGLE CONSENT MODE v2
 ========================================== -->
 
 <script>
-    (function(w,d,s,l,i) {
-        w[l] = w[l] || [];
+    window.dataLayer = window.dataLayer || [];
 
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
+    function gtag() {
+        dataLayer.push(arguments);
+    }
 
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer'
-                ? '&l=' + l
-                : '';
+    gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 2000
+    });
 
-        j.async = true;
-
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' +
-            i +
-            dl;
-
-        f.parentNode.insertBefore(j, f);
-
-    })(window, document, 'script', 'dataLayer', 'GTM-T9Z2T4RM');
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
 </script>
 
-<!-- End Google Tag Manager -->
+
+<!-- =========================================
+     GOOGLE ANALYTICS 4
+========================================== -->
+
+<script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-D48G5HC8G1">
+</script>
+
+<script>
+    gtag("js", new Date());
+
+    gtag("config", "G-D48G5HC8G1");
+</script>
 
 
+<!-- =========================================
+     COOKIEYES
+========================================== -->
+
+<script
+    id="cookieyes"
+    type="text/javascript"
+    src="https://cdn-cookieyes.com/client_data/dc407ac7b170aed1c0a980ccf6e65b48/script.js">
+</script>
 <!-- =========================================
      BASIC META
 ========================================== -->
@@ -101,23 +118,6 @@
 </head>
 
 <body>
-<!-- =========================================
-     GOOGLE TAG MANAGER NOSCRIPT
-========================================== -->
-
-<noscript>
-
-    <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-T9Z2T4RM"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden">
-    </iframe>
-
-</noscript>
-
-<!-- End Google Tag Manager (noscript) -->
-
 
 <!-- =========================================
      NAVBAR
