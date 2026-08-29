@@ -4,41 +4,42 @@
 
 <head>
 <!-- =========================================
-     GOOGLE ANALYTICS 4
-     ========================================= -->
-
-<script async
-    src="https://www.googletagmanager.com/gtag/js?id=G-D48G5HC8G1">
-</script>
+     GOOGLE TAG MANAGER
+========================================== -->
 
 <script>
-    window.dataLayer = window.dataLayer || [];
+    (function(w,d,s,l,i) {
+        w[l] = w[l] || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
 
-    gtag("js", new Date());
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer'
+                ? '&l=' + l
+                : '';
 
-    gtag("config", "G-D48G5HC8G1");
+        j.async = true;
+
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' +
+            i +
+            dl;
+
+        f.parentNode.insertBefore(j, f);
+
+    })(window, document, 'script', 'dataLayer', 'GTM-T9Z2T4RM');
 </script>
-<head>
 
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T9Z2T4RM');
-    </script>
-    <!-- End Google Tag Manager -->
+<!-- End Google Tag Manager -->
 
 
-    <meta charset="UTF-8">
 <!-- =========================================
      BASIC META
-     ========================================= -->
+========================================== -->
 
 <meta charset="UTF-8">
 
@@ -50,7 +51,7 @@
 
 <!-- =========================================
      SEO
-     ========================================= -->
+========================================== -->
 
 <title>
     Janeth Cadiente Sandberg | Hospitality Professional & Frontend Developer
@@ -69,7 +70,7 @@
 
 <!-- =========================================
      GOOGLE FONTS
-     ========================================= -->
+========================================== -->
 
 <link
     rel="preconnect"
@@ -90,7 +91,7 @@
 
 <!-- =========================================
      CSS
-     ========================================= -->
+========================================== -->
 
 <link
     rel="stylesheet"
@@ -100,31 +101,34 @@
 </head>
 
 <body>
-<body>
+<!-- =========================================
+     GOOGLE TAG MANAGER NOSCRIPT
+========================================== -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T9Z2T4RM"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<noscript>
+
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T9Z2T4RM"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden">
+    </iframe>
+
+</noscript>
+
+<!-- End Google Tag Manager (noscript) -->
 
 
-    <!-- Navbar -->
 <!-- =========================================
      NAVBAR
-     ========================================= -->
+========================================== -->
 
 <div id="navbar-container"></div>
 
 
 <!-- =========================================
      MAIN CONTENT
-     ========================================= -->
+========================================== -->
 
 <main>
 
@@ -233,7 +237,6 @@
 
         <div class="card-container">
 
-
             <article class="card">
 
                 <span class="card-number">
@@ -322,7 +325,6 @@
 
 
         <div class="card-container">
-
 
             <article class="card">
 
@@ -465,6 +467,7 @@
                 Explore Collaboration →
             </a>
 
+
             <a
                 href="contact.html"
                 class="btn btn-outline"
@@ -529,21 +532,18 @@
 </main>
 
 
-
 <!-- =========================================
      FOOTER
-     ========================================= -->
+========================================== -->
 
 <div id="footer-container"></div>
 
 
-
 <!-- =========================================
      PORTFOLIO JAVASCRIPT
-     ========================================= -->
+========================================== -->
 
 <script src="script.js"></script>
-
 
 </body>
 
